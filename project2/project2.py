@@ -10,11 +10,11 @@ print(f'You entered: {colTwoHeader}')
 # TODO: prompt user for data points, string, int for city and population
 citydata = []
 name, pop = input("Enter a data point: ").split(',')
-pop = int(pop)
-citydata.append({name, pop})
+dataPoint = {str(name), int(pop)}
+citydata.append(dataPoint)
 name, pop = input("Enter a data point: ").split(',')
-pop = int(pop)
-citydata.append({name, pop})
+dataPoint = {str(name), int(pop)}
+citydata.append(dataPoint)
 
 print(citydata)
 
