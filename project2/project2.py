@@ -15,12 +15,7 @@ citydata.append({name, pop})
 name, pop = input("Enter a data point: ").split(',')
 pop = int(pop)
 citydata.append({name, pop})
-# cityOne = {'name': 'San Antonio', 'population': 100000}
-# cityTwo = {'name': 'Houston', 'population': 300000}
-# cityThree = {'name': 'Dallas', 'population': 600000}
-# citydata.append(cityOne)
-# citydata.append(cityTwo)
-# citydata.append(cityThree)
+
 print(citydata)
 
 
