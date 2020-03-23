@@ -9,12 +9,18 @@ colTwoHeader = input("Enter the column 2 header:")
 print(f'You entered: {colTwoHeader}')
 # TODO: prompt user for data points, string, int for city and population
 citydata = []
-cityOne = {'name': 'San Antonio', 'population': 100000}
-cityTwo = {'name': 'Houston', 'population': 300000}
-cityThree = {'name': 'Dallas', 'population': 600000}
-citydata.append(cityOne)
-citydata.append(cityTwo)
-citydata.append(cityThree)
+name, pop = input("Enter a data point: ").split(',')
+pop = int(pop)
+citydata.append({name, pop})
+name, pop = input("Enter a data point: ").split(',')
+pop = int(pop)
+citydata.append({name, pop})
+# cityOne = {'name': 'San Antonio', 'population': 100000}
+# cityTwo = {'name': 'Houston', 'population': 300000}
+# cityThree = {'name': 'Dallas', 'population': 600000}
+# citydata.append(cityOne)
+# citydata.append(cityTwo)
+# citydata.append(cityThree)
 print(citydata)
 
 
