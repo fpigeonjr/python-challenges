@@ -9,12 +9,15 @@ colTwoHeader = input("Enter the column 2 header:")
 print(f'You entered: {colTwoHeader}')
 # TODO: prompt user for data points, string, int for city and population
 citydata = []
-name, pop = input("Enter a data point: ").split(',')
-dataPoint = {str(name), int(pop)}
-citydata.append(dataPoint)
-name, pop = input("Enter a data point: ").split(',')
-dataPoint = {str(name), int(pop)}
-citydata.append(dataPoint)
+isDone = False
+while(isDone != True):
+    dataInput = input("Enter a data point('done to stop input): ")
+    if(dataInput == 'done'):
+        isDone = True
+    else:
+        name, pop = dataInput.split(',')
+        dataPoint = {str(name), int(pop)}
+        citydata.append(dataPoint)
 
 print(citydata)
 
