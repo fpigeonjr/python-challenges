@@ -1,5 +1,6 @@
 # OBJECTIVE: Display statistics, table, and histogram of a set of cities and population of each city.
 # prompt user for title of the data and output to the user
+from __future__ import division
 title = input("Enter a title for the data: ")
 print(f'You entered: {title}')
 # prompt user for headers of the two columns of the table
@@ -8,7 +9,8 @@ print(f'You entered: {colOneHeader}')
 colTwoHeader = input("Enter the column 2 header:")
 print(f'You entered: {colTwoHeader}')
 # TODO: prompt user for data points, string, int for city and population
-citydata = []
+cityData = []
+cityPop = []
 isDone = False
 while(isDone != True):
     dataInput = input("Enter a data point('done to stop input): ")
@@ -19,9 +21,20 @@ while(isDone != True):
         print(f'City: {name}')
         print(f'Population: {pop}')
         dataPoint = {str(name), int(pop)}
-        citydata.append(dataPoint)
+        cityData.append(dataPoint)
+        cityPop.append(int(pop))
+# https://stackoverflow.com/questions/27009247/python-find-min-max-and-average-of-a-list-array
 
-print(citydata)
+maxValue = max(cityPop)
+minValue = min(cityPop)
+avgValue = sum(cityPop)/len(cityPop)
+print('Population Statistics')
+print(f'Minimum: {minValue}')
+print(f'Maximum: {maxValue}')
+print(f'Mean: {avgValue:.3f}')
+
+print(cityPop)
+print(cityData)
 
 
 # TODO: output min, max, and mean of the population data
