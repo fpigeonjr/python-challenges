@@ -16,6 +16,8 @@ while(isDone != True):
         isDone = True
     else:
         name, pop = dataInput.split(',')
+        print(f'City: {name}')
+        print(f'Population: {pop}')
         dataPoint = {str(name), int(pop)}
         citydata.append(dataPoint)
 
