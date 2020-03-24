@@ -12,7 +12,7 @@ citydata = []
 isDone = False
 while(isDone != True):
     dataInput = input("Enter a data point('done to stop input): ")
-    if(dataInput == 'done'):
+    if(dataInput.lower() == 'done'):
         isDone = True
     else:
         name, pop = dataInput.split(',')
