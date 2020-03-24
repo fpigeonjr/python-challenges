@@ -23,20 +23,24 @@ while(isDone != True):
         dataPoint = {str(name), int(pop)}
         cityData.append(dataPoint)
         cityPop.append(int(pop))
+
+#  output min, max, and mean of the population data
 # https://stackoverflow.com/questions/27009247/python-find-min-max-and-average-of-a-list-array
 
-maxValue = max(cityPop)
-minValue = min(cityPop)
-avgValue = sum(cityPop)/len(cityPop)
-print('Population Statistics')
-print(f'Minimum: {minValue}')
-print(f'Maximum: {maxValue}')
-print(f'Mean: {avgValue:.3f}')
 
-print(cityPop)
-print(cityData)
+def cityStatistics(cityPop):
+    maxValue = max(cityPop)
+    minValue = min(cityPop)
+    avgValue = sum(cityPop)/len(cityPop)
+    print('Population Statistics')
+    print(f'Minimum: {minValue}')
+    print(f'Maximum: {maxValue}')
+    print(f'Mean: {avgValue:.3f}')
 
 
-# TODO: output min, max, and mean of the population data
+# print(cityPop)
+# print(cityData)
+cityStatistics(cityPop)
+
 # TODO: output data in a formatted table
 # TODO: output data in a histogram; print one user-specified char for 100k peeps
