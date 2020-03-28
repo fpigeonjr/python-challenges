@@ -11,7 +11,7 @@ print(f'You entered: {colOneHeader}')
 colTwoHeader = input("Enter the column 2 header:")
 print(f'You entered: {colTwoHeader}')
 
-# TODO: prompt user for data points, string, int for city and population
+# prompt user for data points, string, int for city and population
 cityData = []
 cityPop = []
 isDone = False
@@ -50,12 +50,12 @@ def cityTable(cityData, title, colOneHeader, colTwoHeader):
     for pop, city in cityData:
         print(f'{city}    |    {pop}')
 
-# uncommment to debug
+# uncomment to debug
 # print(cityPop)
 # print(cityData)
 
 
+# output data in a formatted table
 cityStatistics(cityPop)
-# TODO: output data in a formatted table
 cityTable(cityData, title, colOneHeader, colTwoHeader)
 # TODO: output data in a histogram; print one user-specified char for 100k peeps
