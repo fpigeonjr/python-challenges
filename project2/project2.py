@@ -55,10 +55,10 @@ def cityTable(cityData, title, colOneHeader, colTwoHeader):
 # print(cityData)
 
 
-def histogramTable(histogramChar, cityData):
+def histogramTable(histogramChar, CityPop):
     for pop in cityPop:
-        chars = pop // 100000
-        print(f'{histogramChar} needs to print {chars} times')
+        popsChars = pop // 100000
+        print(f'{histogramChar * popsChars}')
 
     # output data in a formatted table
 cityStatistics(cityPop)
