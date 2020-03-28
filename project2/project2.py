@@ -1,14 +1,13 @@
 # OBJECTIVE: Display statistics, table, and histogram of a set of cities and population of each city.
 
 # prompt user for title of the data and output to the user
-from __future__ import division
 title = input("Enter a title for the data: ")
 print(f'You entered: {title}')
 
 # prompt user for headers of the two columns of the table
-colOneHeader = input("Enter the column 1 header:")
+colOneHeader = input("Enter the column 1 header: ")
 print(f'You entered: {colOneHeader}')
-colTwoHeader = input("Enter the column 2 header:")
+colTwoHeader = input("Enter the column 2 header: ")
 print(f'You entered: {colTwoHeader}')
 
 # prompt user for data points, string, int for city and population
@@ -27,6 +26,7 @@ while(isDone != True):
         cityData.append(dataPoint)
         cityPop.append(int(pop))
 
+histogramChar = input("Please enter the character for the histogram: ")
 #  output min, max, and mean of the population data
 # https://stackoverflow.com/questions/27009247/python-find-min-max-and-average-of-a-list-array
 
@@ -55,7 +55,13 @@ def cityTable(cityData, title, colOneHeader, colTwoHeader):
 # print(cityData)
 
 
-# output data in a formatted table
+def histogramTable(histogramChar, cityData):
+    for pop in cityPop:
+        chars = pop // 100000
+        print(f'{histogramChar} needs to print {chars} times')
+
+    # output data in a formatted table
 cityStatistics(cityPop)
 cityTable(cityData, title, colOneHeader, colTwoHeader)
 # TODO: output data in a histogram; print one user-specified char for 100k peeps
+histogramTable(histogramChar, cityPop)
